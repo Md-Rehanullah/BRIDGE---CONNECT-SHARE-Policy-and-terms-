@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="Request deletion of your Bridge account and associated data.">
+  <title>Request Account Deletion — Bridge</title>
+  <link rel="stylesheet" href="../assets/site.css">
+  <script defer src="../assets/supabase.js"></script>
+  <script defer src="../assets/deletion-request.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../"><span class="brand-name">BRIDGE</span><span class="brand-tagline">CONNECT &amp; SHARE</span></a>
+    <span class="adult-badge">18+ COMMUNITY</span>
+  </header>
+  <main class="shell">
+    <div class="hero">
+      <p class="eyebrow">Bridge by atlasTHOUGHT</p>
+      <h1>Account deletion request</h1>
+      <p class="lead">Verify the Google account connected to Bridge, then send a request to Bridge support.</p>
+    </div>
+    <section class="deletion-card" aria-labelledby="request-heading">
+      <h2 id="request-heading">Request account deletion</h2>
+      <p>For account security, sign in with Google. Bridge receives a verified account identity from Google and never asks for or receives your Google password. Your request will be reviewed by an administrator; this form does not delete your account automatically.</p>
+      <div id="auth-status" class="notice" role="status">Checking sign-in…</div>
+      <div id="sign-in-panel" hidden>
+        <p id="sign-in-help" class="fine-print">Use the Google account you use with Bridge.</p>
+        <button id="google-sign-in" class="button" type="button">Continue with Google</button>
+      </div>
+      <form id="request-form" hidden>
+        <div class="field">
+          <label for="account-email">Verified Google account</label>
+          <input id="account-email" type="email" readonly autocomplete="email" aria-describedby="email-help">
+          <small id="email-help" class="fine-print">This email is provided by your verified Google sign-in.</small>
+        </div>
+        <div class="field">
+          <label for="reason">Reason for deletion <span class="fine-print">(optional)</span></label>
+          <textarea id="reason" maxlength="1000" placeholder="You can tell us why you want to delete your account."></textarea>
+        </div>
+        <div class="button-row">
+          <button id="send-request" class="button delete" type="submit">Send deletion request</button>
+          <button id="switch-account" class="button secondary" type="button">Use another Google account</button>
+        </div>
+      </form>
+      <div id="request-success" class="notice success" role="status" hidden>
+        Your verified request has been sent to Bridge support. We aim to complete it within 7 business days. Your account is not deleted automatically by this form. If more information is needed, support will contact you at the verified email shown above.
+      </div>
+      <p class="fine-print">You can also delete your account inside Bridge at Profile → Settings → Delete my account. Some safety, security, fraud-prevention or legal records may be retained where necessary. See the <a href="../privacy/">Privacy Policy</a>.</p>
+    </section>
+    <nav class="legal-nav" aria-label="Other pages"><a href="../">Home</a><a href="../privacy/">Privacy Policy</a><a href="../terms/">Terms &amp; Conditions</a><a href="../child-safety/">Child Safety</a></nav>
+    <p class="help-note">Need help? <a href="mailto:atlasthoughthelp@gmail.com">atlasthoughthelp@gmail.com</a></p>
+  </main>
+  <footer class="site-footer"><span>BRIDGE — CONNECT &amp; SHARE</span><span>Operated by atlasTHOUGHT</span></footer>
+</body>
+</html>
